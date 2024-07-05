@@ -4,7 +4,7 @@ from openai import OpenAI
 
     # Set up OpenAI API key
 openai_api_key = os.getenv('OPENAI_API_KEY')
-client = OpenAI(api_key=openai_api_ke)
+client = OpenAI(api_key=openai_api_key)
 
 def generate_story():
         prompt = "Generate a unique and interesting movie storyline with a title."
