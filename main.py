@@ -2,11 +2,11 @@ import streamlit as st
 from openai import OpenAI
 
     # Set up OpenAI API key
-sayang = OpenAI(api_key=st.secrets["OPENAI"]["OPENAI_API_KEY"])
+honey = OpenAI(api_key=st.secrets["OPENAI"]["OPENAI_API_KEY"])
 
 def generate_story():
         prompt = "Generate a unique and interesting movie storyline with a title."
-        response = sayang.chat.completions.create(
+        response = honey.chat.completions.create(
             messages=[
                 {
                     "role": "user",
@@ -21,7 +21,7 @@ def generate_story():
 
 def suggest_director(storyline):
         prompt = f"Based on the following movie storyline, suggest the best director and explain why:\n\n{storyline}"
-        response = sayang.chat.completions.create(
+        response = honey.chat.completions.create(
             messages=[
                 {
                     "role": "user",
@@ -36,7 +36,7 @@ def suggest_director(storyline):
 
 def suggest_cast(storyline):
         prompt = f"Based on the following movie storyline, suggest the best cast for each character and explain why:\n\n{storyline}"
-        response = sayang.chat.completions.create(
+        response = honey.chat.completions.create(
             messages=[
                 {
                     "role": "user",
