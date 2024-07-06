@@ -23,7 +23,7 @@ def generate_story():
 
 def suggest_director(storyline):
         prompt = f"Based on the following movie storyline, suggest the best director and explain why:\n\n{storyline}"
-        response = client.chat.completions.create(
+        response = sayang.chat.completions.create(
             messages=[
                 {
                     "role": "user",
@@ -38,7 +38,7 @@ def suggest_director(storyline):
 
 def suggest_cast(storyline):
         prompt = f"Based on the following movie storyline, suggest the best cast for each character and explain why:\n\n{storyline}"
-        response = client.chat.completions.create(
+        response = sayang.chat.completions.create(
             messages=[
                 {
                     "role": "user",
