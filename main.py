@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
     # Set up OpenAI API key
-sayang = OpenAI(api_key=st.secrets['OPENAI_API_KEY'])
+sayang = OpenAI(api_key=st.secrets["OPENAI"]["OPENAI_API_KEY"])
 
 def generate_story():
         prompt = "Generate a unique and interesting movie storyline with a title."
